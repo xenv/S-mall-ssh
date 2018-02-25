@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+		"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.multipart.maxSize" value="10240000"/>
+	<constant name="struts.objectFactory" value="spring"/>
+
+	<package name="basic-struts" extends="struts-default">
+		<interceptors>
+			<interceptor name="authInterceptor" class="tmall.interceptor.AuthInterceptor" />
+			<interceptor name="categoryNamesBelowSearchInterceptor" class="tmall.interceptor.CategoryNamesBelowSearchInterceptor" />
+			<interceptor name="SEOInterceptor" class="tmall.interceptor.ConfigInterceptor" />
+
+			<interceptor-stack name="myInterceptors">
+				<interceptor-ref name="authInterceptor"/>
+				<interceptor-ref name="SEOInterceptor"/>
+				<interceptor-ref name="categoryNamesBelowSearchInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myInterceptors" />
+		<global-results>
+			<result name="/noAuth">/noAuth</result>
+		</global-results>
+	</package>
+
+	<package name="admin" namespace="/admin" extends="basic-struts">
+		<!--配置/admin和/admin/跳转-->
+		<action name="index" >
+			<result type="redirect">category/list</result>
+		</action>
+	</package>
+</struts>
