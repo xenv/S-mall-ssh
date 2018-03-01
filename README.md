@@ -20,6 +20,12 @@
  * 本项目为Maven项目，后端使用 Spring 4 + Struts 2 + Hibernate 4
  * 实现了一个 BaseService 类，涵盖了90% 的 Service 方法，各个 Service 只需写少量代码即可
  * 通过拦截器和自定义注解实现了方法级粒度的用户鉴权
+
+  
+讲解文章：  
+  * [小小商城项目概述 —— 需求分析、数据表设计、原型设计、多层结构设计、项目规划][4]
+  * [SSH开发 | 配合Hibernate，通过泛型实现 BaseService ，抽象增改删查方法][5]
+  * [SSH开发 | 配合自定义注解 和 Stratus拦截器，实现 方法级粒度 用户鉴权][6]
   
 
 功能： 
@@ -45,3 +51,6 @@
   [1]: http://small.ડ.com
   [2]: https://github.com/xenv/S-mall-servlet
   [3]: https://github.com/xenv/S-mall-ssm
+  [4]: https://www.cnblogs.com/bukong/p/servlet-filter-mapping.html
+  [5]: http://www.cnblogs.com/bukong/p/ssh-BaseService.html
+  [6]: http://www.cnblogs.com/bukong/p/ssh-auth.html
