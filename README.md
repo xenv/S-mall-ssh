@@ -51,6 +51,6 @@
   [1]: http://small.ડ.com
   [2]: https://github.com/xenv/S-mall-servlet
   [3]: https://github.com/xenv/S-mall-ssm
-  [4]: http://www.cnblogs.com/bukong/p/small-start.html
-  [5]: http://www.cnblogs.com/bukong/p/ssh-BaseService.html
-  [6]: http://www.cnblogs.com/bukong/p/ssh-auth.html
+  [4]: https://yuque.com/page/luan.ma/small-start
+  [5]: https://yuque.com/page/luan.ma/ssh-BaseService
+  [6]: https://yuque.com/page/luan.ma/ssh-auth
